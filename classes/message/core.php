@@ -51,6 +51,11 @@ class Message_Core
 		return new Message($type, $content);
 	}
 
+	public function __toString()
+	{
+		return($this->content);
+	}
+
 	/**
 	 * Clears the message from the session
 	 *
