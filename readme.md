@@ -1,5 +1,10 @@
 # Message
 
+New: in this fork, messages are separated by type, and there is a default Twitter Bootstrap-ready view.
+
+
+========
+
 A flash messaging system for Kohana v3.0 and higher.
 
 To use, download the source, extract and rename to message. Move that folder into your modules directory and activate in your bootstrap.
