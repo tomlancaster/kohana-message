@@ -32,7 +32,7 @@ class Message_Core
 	/**
 	 * @var  string  Default message display view.
 	 */
-	public static $default = 'message/basic';
+	public static $default = 'message/bootstrap';
 
 	/**
 	 * Creates a new Falcon_Message instance.
@@ -121,7 +121,11 @@ class Message_Core
 
 		$messages = $session->get('flash_message', array());
 
-		$messages[] = Message::factory($type, $content);
+		if (!isset($messages[$type]))
+		{
+			$messages[$type] = array();
+		}
+		$messages[$type][] = $content;
 
 		$session->set('flash_message', $messages);
 	}
