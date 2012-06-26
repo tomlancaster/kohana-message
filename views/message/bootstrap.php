@@ -2,7 +2,7 @@
 	<?php if (Arr::get($messages, 'error')) :?>
 	<div class="span12">
 		<div class="alert alert-danger">
-			<a class="close">x</a>
+			<a class="close" data-dismiss="alert" href="#">&times;</a>
 			<strong><?php echo __('Error') ?></strong>
 			<?php echo implode('<br/>', $messages['error'])?>
 		</div>
@@ -11,7 +11,7 @@
 	if (Arr::get($messages, 'success')) :?>
 	<div class="span12">
 		<div class="alert alert-success">
-			<a class="close">x</a>
+			<a class="close" data-dismiss="alert" href="#">&times;</a>
 			<strong><?php echo __('Success') ?></strong>
 			<?php echo implode('<br/>', $messages['success'])?>
 		</div>
@@ -20,7 +20,7 @@
 	if (Arr::get($messages, 'notice')) :?>	
 	<div class="span12">
 		<div class="alert alert-info">
-			<a class="close">x</a>
+			<a class="close" data-dismiss="alert" href="#">&times;</a>
 			<strong><?php echo __('Information') ?></strong>
 			<?php echo implode('<br/>', $messages['notice'])?>
 		</div>
